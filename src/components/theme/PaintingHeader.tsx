@@ -28,8 +28,8 @@ export function PaintingHeader({ painting }: { painting: Painting }) {
         <div className="mt-8">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Colours in this painting</h2>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {painting.swatches.map((s) => (
-              <li key={s.hex} className="text-center">
+            {painting.swatches.map((s, i) => (
+              <li key={i} className="text-center">
                 <span className="block h-12 w-12 rounded-md ring-1 ring-ink/10" style={{ background: s.hex }} />
                 <span className="mt-1 block font-mono text-[10px] uppercase text-ink-muted">{s.hex}</span>
               </li>

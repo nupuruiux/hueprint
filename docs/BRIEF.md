@@ -142,7 +142,7 @@ Every feature gets an issue, a branch and a pull request.
 - [x] Upload flow
 
 **Weekend 4: Polish and ship**
-- [ ] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+
+- [x] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+
 - [ ] Typography pass: replace Instrument Serif + Inter Tight with a more distinctive pairing (compare 3–4 on a type specimen page first)
 - [ ] README with screenshots, a short demo GIF and setup steps
 - [ ] Write the case study
