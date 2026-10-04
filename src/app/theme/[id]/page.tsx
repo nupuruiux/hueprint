@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { MorePaintings } from "@/components/theme/MorePaintings";
 import { PaintingHeader } from "@/components/theme/PaintingHeader";
 import { ThemeStudio } from "@/components/theme/ThemeStudio";
 import { paintings } from "@/lib/paintings";
@@ -27,8 +28,9 @@ export default async function ThemePage(props: PageProps<"/theme/[id]">) {
       {/* The studio reads its state from the URL (?v=soft…), which is only
           known in the browser, so it renders inside a Suspense boundary. */}
       <Suspense fallback={<p className="py-16 font-display text-2xl italic text-ink-muted">Mixing paint…</p>}>
-        <ThemeStudio swatches={painting.swatches} />
+        <ThemeStudio title={painting.title} swatches={painting.swatches} />
       </Suspense>
+      <MorePaintings painting={painting} />
     </div>
   );
 }
