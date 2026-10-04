@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { describeFix, STEPS, type Mode, type Role, type Swatch, type Theme } from "@/lib/theme";
+import { ModeToggle } from "./ModeToggle";
 import { RoleRow } from "./RoleRow";
 
 const GROUPS: { title: string; roles: Role[] }[] = [
@@ -50,20 +51,7 @@ export function TokenPanel({ theme, mode, swatches, locks, onModeChange, onLock,
               Unlock all ({lockCount})
             </button>
           )}
-          {/* Light / Dark toggle for the whole section. */}
-          <div role="group" aria-label="Colour mode" className="flex rounded-full border border-ink-muted/50 p-1">
-            {(["light", "dark"] as const).map((m) => (
-              <button
-                key={m}
-                type="button"
-                aria-pressed={mode === m}
-                onClick={() => onModeChange(m)}
-                className={`rounded-full px-4 py-1.5 text-sm font-semibold capitalize transition-colors ${mode === m ? "bg-ink text-paper" : "text-ink hover:bg-paper-deep"}`}
-              >
-                {m}
-              </button>
-            ))}
-          </div>
+          <ModeToggle mode={mode} onChange={onModeChange} />
         </div>
       </div>
 

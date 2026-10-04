@@ -137,7 +137,7 @@ Every feature gets an issue, a branch and a pull request.
 - [x] Theme page: painting header, Faithful / Soft / Bold options, token system with light/dark, lock, swap, copy
 
 **Weekend 3: Preview, export, upload**
-- [ ] Live dashboard + mobile preview
+- [x] Live dashboard + mobile preview
 - [ ] Export panel (CSS, Tailwind, JSON) + share link
 - [ ] Upload flow
 
