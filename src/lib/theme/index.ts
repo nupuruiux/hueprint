@@ -7,3 +7,4 @@ export { buildScale } from "./scales";
 export { fixContrast, describeFix, type Pair } from "./contrast";
 export { buildTheme, buildOptions, pickPrimary, isMonochrome, requiredPairs } from "./build";
 export { toCSS, toTailwind, toDTCG } from "./export";
+export { themeVars } from "./vars";
