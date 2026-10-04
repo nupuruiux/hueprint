@@ -2,6 +2,8 @@ import { connection } from "next/server";
 import { Hero } from "@/components/home/Hero";
 import { SwatchMarquee } from "@/components/home/SwatchMarquee";
 import { Gallery } from "@/components/home/Gallery";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { UploadSection } from "@/components/home/UploadSection";
 import { heroPaintings, paintings } from "@/lib/paintings";
 
 export default async function Home() {
@@ -18,6 +20,8 @@ export default async function Home() {
       <Hero startIndex={heroStart} />
       <SwatchMarquee />
       <Gallery paintings={paintings} />
+      <UploadSection />
+      <HowItWorks />
     </>
   );
 }

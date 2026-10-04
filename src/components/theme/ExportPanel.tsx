@@ -13,10 +13,10 @@ type FormatId = (typeof FORMATS)[number]["id"];
 
 const STRATEGY_NAMES: Record<Strategy, string> = { faithful: "Faithful", soft: "Soft", bold: "Bold" };
 
-type Props = { theme: Theme; defaultName: string; visible: boolean };
+type Props = { theme: Theme; defaultName: string; visible: boolean; shareable?: boolean };
 
 // Sticky bar + export dialog. No sign-in, no gate: export is free and immediate.
-export function ExportPanel({ theme, defaultName, visible }: Props) {
+export function ExportPanel({ theme, defaultName, visible, shareable = true }: Props) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [name, setName] = useState(defaultName);
   const [format, setFormat] = useState<FormatId>("css");
@@ -72,9 +72,11 @@ export function ExportPanel({ theme, defaultName, visible }: Props) {
             <span className="font-semibold">{label}</span>
             <span className="text-paper/70"> · {STRATEGY_NAMES[theme.strategy]}</span>
           </p>
-          <button type="button" onClick={() => copy(window.location.href, "Share link")} className="hidden rounded-full border border-paper/40 px-4 py-2 text-sm font-semibold hover:border-paper sm:block">
-            Copy share link
-          </button>
+          {shareable && (
+            <button type="button" onClick={() => copy(window.location.href, "Share link")} className="hidden rounded-full border border-paper/40 px-4 py-2 text-sm font-semibold hover:border-paper sm:block">
+              Copy share link
+            </button>
+          )}
           <button type="button" onClick={() => {
               dialog.current?.showModal();
               setOpen(true);
@@ -148,9 +150,13 @@ export function ExportPanel({ theme, defaultName, visible }: Props) {
             <button type="button" onClick={download} className="rounded-full border border-ink px-4 py-2 text-sm font-semibold">
               Download
             </button>
-            <button type="button" onClick={() => copy(window.location.href, "Share link")} className="text-sm font-semibold text-rosewood underline underline-offset-4">
-              Copy share link
-            </button>
+            {shareable ? (
+              <button type="button" onClick={() => copy(window.location.href, "Share link")} className="text-sm font-semibold text-rosewood underline underline-offset-4">
+                Copy share link
+              </button>
+            ) : (
+              <span className="text-sm text-ink-muted">No share link: your image stays on your device.</span>
+            )}
             <p aria-live="polite" className="text-sm text-ink-muted">{status}</p>
           </div>
         </div>

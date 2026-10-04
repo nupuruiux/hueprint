@@ -139,7 +139,7 @@ Every feature gets an issue, a branch and a pull request.
 **Weekend 3: Preview, export, upload**
 - [x] Live dashboard + mobile preview
 - [x] Export panel (CSS, Tailwind, JSON) + share link
-- [ ] Upload flow
+- [x] Upload flow
 
 **Weekend 4: Polish and ship**
 - [ ] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+

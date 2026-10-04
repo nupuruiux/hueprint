@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Serif, Inter_Tight } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { UploadProvider } from "@/components/upload/UploadProvider";
 import "./globals.css";
 
 // Display: an editorial serif, used big and often italic.
@@ -33,11 +34,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="main" className="flex flex-1 flex-col">
-          {children}
-        </main>
-        <SiteFooter />
+        <UploadProvider>
+          <SiteHeader />
+          <main id="main" className="flex flex-1 flex-col">
+            {children}
+          </main>
+          <SiteFooter />
+        </UploadProvider>
       </body>
     </html>
   );
