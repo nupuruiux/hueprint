@@ -134,7 +134,7 @@ Every feature gets an issue, a branch and a pull request.
 **Weekend 2: Gallery and theme engine**
 - [x] Landing page: hero, swatch marquee, filters, gallery with hover/tap states
 - [x] Theme engine in `lib/theme/` + unit tests (Vitest)
-- [ ] Theme page: painting header, Faithful / Soft / Bold options, token system with light/dark, lock, swap, copy
+- [x] Theme page: painting header, Faithful / Soft / Bold options, token system with light/dark, lock, swap, copy
 
 **Weekend 3: Preview, export, upload**
 - [ ] Live dashboard + mobile preview
@@ -143,6 +143,7 @@ Every feature gets an issue, a branch and a pull request.
 
 **Weekend 4: Polish and ship**
 - [ ] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+
+- [ ] Typography pass: replace Instrument Serif + Inter Tight with a more distinctive pairing (compare 3–4 on a type specimen page first)
 - [ ] README with screenshots, a short demo GIF and setup steps
 - [ ] Write the case study
 
