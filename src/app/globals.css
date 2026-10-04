@@ -31,7 +31,39 @@
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --default-transition-duration: 250ms;
   --default-transition-timing-function: var(--ease-soft);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-marquee: marquee 90s linear infinite;
+  --animate-draw: draw 0.7s var(--ease-soft) both;
+  --animate-pop: pop 0.4s var(--ease-soft) both;
+  --animate-label: label 0.4s var(--ease-soft) both;
+
+  @keyframes float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -10px; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  /* Redlines: SVG paths use pathLength="1", so a dash of 1 is the whole line. */
+  @keyframes draw {
+    from { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    to { stroke-dasharray: 1; stroke-dashoffset: 0; }
+  }
+  @keyframes pop {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  @keyframes label {
+    from { opacity: 0; translate: 0 6px; }
+    to { opacity: 1; translate: 0 0; }
+  }
 }
+
+/* touch: styles for devices with no hover (phones, tablets).
+   Tailwind's hover: already only applies where hovering is possible. */
+@custom-variant touch (@media (hover: none));
 
 :root {
   color-scheme: light;
@@ -53,6 +85,14 @@ body {
 /* Over the dark hero, the ring switches to paper so it stays visible. */
 .on-dark :focus-visible {
   outline-color: var(--color-paper);
+}
+
+/* Faint hairline grid across the hero, after Winter '26: six columns, two rows. */
+.hairline-grid {
+  background-image:
+    linear-gradient(to right, rgb(246 241 234 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(246 241 234 / 0.1) 1px, transparent 1px);
+  background-size: calc(100% / 6) 100%, 100% 50%;
 }
 
 @media (prefers-reduced-motion: reduce) {

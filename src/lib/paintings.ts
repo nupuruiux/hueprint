@@ -19,6 +19,28 @@ export function imageUrl(p: Painting): string {
   return `/paintings/${p.id}.jpg`;
 }
 
+// The rotating hero: hand-picked portraits (HERO_IDS in the fetch script).
+export const heroPaintings = paintings.filter((p) => p.hero);
+
+// Where each hero's figure sits, as a CSS object-position, so the full-bleed
+// crop keeps the face in view on wide and narrow screens.
+const HERO_FOCUS: Record<number, string> = {
+  95998: "50% 30%", // Rembrandt
+  111317: "45% 22%", // Ingres
+  23972: "50% 22%", // Correggio
+  4788: "60% 26%", // Reynolds
+  4081: "52% 10%", // Moroni
+};
+
+export function heroFocus(p: Painting): string {
+  return HERO_FOCUS[p.id] ?? "50% 30%";
+}
+
+// Title, artist, date and source: shown wherever a painting appears.
+export function creditLine(p: Painting): string {
+  return [p.title, p.artist_title, p.date_display].filter(Boolean).join(", ") + " · Art Institute of Chicago";
+}
+
 export function altText(p: Painting): string {
   return `${p.title} by ${p.artist_title}`;
 }

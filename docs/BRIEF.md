@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Hueprint** (working name) turns any image into an accessible UI theme you can ship: colour roles, light and dark modes, and contrast-checked tokens, exported to CSS, Tailwind or Figma.
+**Hueprint** (working name) turns any painting, or any image you upload, into an accessible UI theme you can ship: colour roles, light and dark modes, and contrast-checked tokens, exported to CSS, Tailwind or Figma.
 
 - **Pitch:** "Any image → a UI theme you can actually ship."
 - **Why this project:** it puts my design-systems work (tokens, roles, accessibility) into a product of my own, and gives me real practice with Git/GitHub, a database and public APIs.
@@ -33,41 +33,45 @@ Primary user for the MVP: **indie developers and product designers**.
 
 ## Scope
 
-The MVP ships one complete loop: image in → theme previewed → theme saved and exported.
+The MVP ships one complete loop: painting (or upload) in → theme previewed → theme exported and shared.
+
+> **Scope change (Oct 2026):** the museum gallery is now the main way in, uploading is second, and Unsplash comes later. The MVP is **frontend only**: theme state lives in the URL so every result can be shared, and the database (sign-in, saved themes) moves to after the MVP. Detailed build spec: `docs/FRONTEND_PROMPT.md`.
 
 | Feature | MVP | Later | Out of scope |
 | --- | --- | --- | --- |
+| Museum painting gallery (Art Institute of Chicago), filter by movement + mood | ✓ | | |
 | Upload your own image | ✓ | | |
-| Search Unsplash photos | ✓ | | |
-| Pick from museum artworks (Art Institute of Chicago) | | ✓ | |
+| Search Unsplash photos | | ✓ | |
 | Extract 6–8 main colours | ✓ | | |
+| Three directions per image: Faithful, Soft, Bold | ✓ | | |
 | Auto-assign roles (primary, surface, text, border, states) | ✓ | | |
 | Auto-fix contrast to WCAG AA | ✓ | | |
 | Light + dark mode | ✓ | | |
-| Live preview on a sample dashboard + mobile card | ✓ | | |
+| Live preview on a sample dashboard + mobile screen | ✓ | | |
 | Manually swap or lock a role's colour | ✓ | | |
 | Export CSS variables + Tailwind config | ✓ | | |
-| Export Figma variables JSON | | ✓ | |
-| Sign in + save themes | ✓ | | |
-| Public share link + gallery | | ✓ | |
+| Export design tokens JSON (W3C format, imports to Figma via Tokens Studio) | ✓ | | |
+| Share link (theme state in the URL) | ✓ | | |
+| Sign in + save themes | | ✓ | |
+| Public gallery of user themes | | ✓ | |
 | Paint mixing notes for painters | | ✓ | |
 | Full component library generation | | | ✓ |
 | AI-generated images | | | ✓ |
 
 ## Core flows and screens
 
-The theme editor is the heart of the product; every other screen feeds into it or out of it. Export works without signing in, which keeps the first try friction-free.
+The theme page is the heart of the product; every other screen feeds into it or out of it. No sign-in anywhere in the MVP: export is free and immediate.
 
 ```
-[Upload an image] ─┐
-[Search Unsplash] ─┼──► [Theme editor] ──► [Save theme (sign in if needed)] ──► [My themes]
-[Museum art (later)]┘    roles auto-assigned          │                              │
-                         contrast fixed to AA         └──────► [Export: CSS, Tailwind] ◄┘
-                         light + dark preview
-                         swap or lock any role
+[Painting gallery] ─┐                                       ┌──► [Export: CSS, Tailwind, JSON]
+                    ├──► [Theme page /theme/[id]] ──────────┤
+[Upload an image] ──┘     choose Faithful / Soft / Bold     └──► [Copy share link]
+                          roles auto-assigned, fixed to AA
+                          light + dark, live preview
+                          swap or lock any role ──► "Try another painting" loops back
 ```
 
-**Screens to design:** landing page with a "try it" drop zone · source picker (upload / Unsplash) · theme editor with preview · export modal · sign-in · My themes list · empty, loading and error states for each.
+**Screens to design:** landing page (hero, gallery, upload drop zone, how it works) · theme page with options, tokens and preview · export panel · loading, low-colour, bad-upload and 404 states.
 
 ## Theme generation logic
 
@@ -84,9 +88,9 @@ All of this runs in the browser; no server or AI is needed. Work in the **OKLCH*
 
 Libraries: `node-vibrant` (extraction), `culori` (OKLCH maths + WCAG contrast).
 
-## Data model
+## Data model (after the MVP)
 
-Four tables in Supabase (Postgres). Auth users come free with Supabase Auth; uploaded files live in a Supabase Storage bucket called `images`.
+The MVP has no database: paintings come from `data/paintings.json` and theme state lives in the URL. When sign-in and saved themes arrive, this is the plan. Four tables in Supabase (Postgres). Auth users come free with Supabase Auth; uploaded files live in a Supabase Storage bucket called `images`.
 
 | Table | Key fields | Notes |
 | --- | --- | --- |
@@ -103,13 +107,14 @@ Four tables in Supabase (Postgres). Auth users come free with Supabase Auth; upl
 | --- | --- |
 | Framework | Next.js (React, App Router) + TypeScript |
 | Styling | Tailwind CSS |
-| Image search API | Unsplash API (free key) — https://unsplash.com/developers |
-| Artwork API (later) | Art Institute of Chicago API (no key) — https://api.artic.edu/docs/ |
+| Artwork API | Art Institute of Chicago API (no key) — https://api.artic.edu/docs/. Fetched once by `scripts/fetch-paintings.ts`; images are saved to `public/paintings/` because AIC's image server refuses requests without an `AIC-User-Agent` header, which browsers can't send |
+| Image search API (later) | Unsplash API (free key) — https://unsplash.com/developers |
 | Colour | `node-vibrant`, `culori` |
-| Database, auth, storage | Supabase |
+| Animation | Framer Motion |
+| Database, auth, storage (later) | Supabase |
 | Hosting | Vercel, connected to GitHub |
 
-**Keep the Unsplash key secret.** Call Unsplash from a Next.js server route (`/api/unsplash`) that reads the key from an environment variable. Never put it in browser code or commit it; `.env.local` is in `.gitignore` from day one. Cache search results to stay under Unsplash's demo rate limit.
+**When Unsplash arrives, keep its key secret.** Call Unsplash from a Next.js server route (`/api/unsplash`) that reads the key from an environment variable. Never put it in browser code or commit it; `.env.local` is in `.gitignore` from day one. Cache search results to stay under Unsplash's demo rate limit.
 
 ## Git/GitHub workflow and milestones
 
@@ -123,29 +128,32 @@ Every feature gets an issue, a branch and a pull request.
 
 **Weekend 1: Foundations**
 - [x] Create the GitHub repo, Next.js app, Tailwind, `.gitignore`
-- [ ] Connect Vercel and get a live URL
-- [ ] Upload an image and show its extracted colours
+- [x] Connect Vercel and get a live URL
+- [x] Fonts, site design tokens, layout shell, painting data (`scripts/fetch-paintings.ts` → `data/paintings.json`)
 
-**Weekend 2: The theme engine**
-- [ ] Role mapping, contrast fixing, dark mode
-- [ ] Live preview on the sample dashboard + mobile card
-- [ ] Swap and lock roles
+**Weekend 2: Gallery and theme engine**
+- [x] Landing page: hero, swatch marquee, filters, gallery with hover/tap states
+- [ ] Theme engine in `lib/theme/` + unit tests (Vitest)
+- [ ] Theme page: painting header, Faithful / Soft / Bold options, token system with light/dark, lock, swap, copy
 
-**Weekend 3: Data and APIs**
-- [ ] Supabase project, tables, Row Level Security
-- [ ] Sign in with email magic link
-- [ ] Save themes; "My themes" page
-- [ ] Unsplash search via a server route
+**Weekend 3: Preview, export, upload**
+- [ ] Live dashboard + mobile preview
+- [ ] Export panel (CSS, Tailwind, JSON) + share link
+- [ ] Upload flow
 
 **Weekend 4: Polish and ship**
-- [ ] CSS + Tailwind export
-- [ ] Empty, loading and error states; mobile layout
+- [ ] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+
 - [ ] README with screenshots, a short demo GIF and setup steps
 - [ ] Write the case study
 
+**After the MVP**
+- [ ] Supabase project, tables, Row Level Security
+- [ ] Sign in with email magic link; save themes; "My themes" page
+- [ ] Unsplash search via a server route
+
 ## Definition of done
 
-- [ ] Live URL anyone can try without signing up (sign-in only to save)
+- [ ] Live URL anyone can try without signing up
 - [ ] Every generated theme passes WCAG AA for text by default
 - [ ] Five real people tried it
 - [ ] Repo has a clean README and at least 10 merged PRs
