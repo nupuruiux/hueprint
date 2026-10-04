@@ -258,6 +258,9 @@ function buildMode(mode: Mode, ctx: ModeContext): { tokens: ModeTokens; fixes: F
 
   // Locked roles override whatever was generated.
   const locked = new Set<Role>();
+  // Backgrounds are anchors: the fixer never moves them to make room for
+  // another colour (that would quietly repaint the whole page).
+  const anchors = new Set<Role>(["background", "surface", "surface-raised"]);
   for (const [role, hex] of Object.entries(ctx.locks[mode] ?? {}) as [Role, string][]) {
     set(role, hex, null);
     locked.add(role);
@@ -295,9 +298,9 @@ function buildMode(mode: Mode, ctx: ModeContext): { tokens: ModeTokens; fixes: F
   // above, "keep the label readable" and "keep the primary visible" push the
   // primary the same way instead of fighting each other.
   const withoutLabel = basePairs(ctx.strategy).filter((p) => p.fg !== "on-primary");
-  record(fixContrast(colors, withoutLabel, { mode, locked }));
+  record(fixContrast(colors, withoutLabel, { mode, locked, anchors }));
   pickOnPrimary();
-  record(fixContrast(colors, basePairs(ctx.strategy), { mode, locked }));
+  record(fixContrast(colors, basePairs(ctx.strategy), { mode, locked, anchors }));
 
   // Stage 2: states derived from the final primary (brief, step 5).
   // Hover/pressed move away from the label colour, so the label stays
@@ -310,7 +313,7 @@ function buildMode(mode: Mode, ctx: ModeContext): { tokens: ModeTokens; fixes: F
   if (!locked.has("primary-pressed")) set("primary-pressed", shift(0.14), refs.primary);
   if (!locked.has("primary-disabled")) set("primary-disabled", toHex({ l: p.l + (surfaceL - p.l) * 0.4, c: p.c * 0.3, h: p.h }), refs.primary);
   if (!locked.has("focus-ring")) set("focus-ring", colors.primary, refs.primary);
-  record(fixContrast(colors, stateAndFocusPairs(), { mode, locked }));
+  record(fixContrast(colors, stateAndFocusPairs(), { mode, locked, anchors }));
 
   // Each token remembers its primitive, and whether the fixer moved it off it.
   const tokens = {} as ModeTokens;

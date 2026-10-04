@@ -11,9 +11,13 @@ const NAV = [
 ];
 
 // On the home page the header floats transparently over the dark hero
-// painting; everywhere else it sits on paper.
+// painting; everywhere else it sits on paper. Theme pages are a workspace,
+// so they get a slim studio bar instead of the full site nav.
 export function SiteHeader() {
-  const overHero = usePathname() === "/";
+  const pathname = usePathname();
+  const overHero = pathname === "/";
+
+  if (pathname.startsWith("/theme")) return <StudioBar />;
 
   return (
     <header
@@ -46,6 +50,21 @@ export function SiteHeader() {
           }
         >
           Upload yours
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+function StudioBar() {
+  return (
+    <header className="relative z-20 border-b border-line bg-paper text-ink">
+      <div className="mx-auto flex h-12 max-w-7xl items-center gap-6 px-4 sm:px-6">
+        <Link href="/" aria-label="Hueprint home">
+          <Logo className="text-lg" />
+        </Link>
+        <Link href="/#gallery" className="text-sm font-medium text-ink-muted underline-offset-4 hover:text-ink hover:underline">
+          ← Gallery
         </Link>
       </div>
     </header>

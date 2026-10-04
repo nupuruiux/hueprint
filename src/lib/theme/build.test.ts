@@ -103,6 +103,17 @@ describe("locks", () => {
     expect(theme.light["primary-hover"].hex).not.toBe(buildTheme(rembrandt, "faithful").light["primary-hover"].hex);
   });
 
+  it("never repaints the backgrounds to make room for a locked colour; warns instead", () => {
+    const base = buildTheme(waterLilies, "soft");
+    const theme = buildTheme(waterLilies, "soft", { dark: { accent: "#18525a" } });
+    expect(theme.dark.accent.hex).toBe("#18525a");
+    expect(theme.dark.background.hex).toBe(base.dark.background.hex);
+    expect(theme.dark.surface.hex).toBe(base.dark.surface.hex);
+    expect(theme.warnings.some((w) => w.startsWith("accent on"))).toBe(true);
+    // Text is untouched by the lock and still passes.
+    expect(contrast(theme.dark.text.hex, theme.dark.background.hex)).toBeGreaterThanOrEqual(4.5);
+  });
+
   it("warns when two locked colours can't pass together", () => {
     const theme = buildTheme(rembrandt, "faithful", { light: { text: "#cccccc", background: "#ffffff" } });
     expect(theme.warnings.length).toBeGreaterThan(0);

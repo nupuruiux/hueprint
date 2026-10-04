@@ -14,16 +14,19 @@ const MAX_PASSES = 4;
 // Checks every pair and, where one fails, nudges a colour's lightness step by
 // step until it passes. Hue and chroma stay, so it still looks like the same
 // colour. Locked roles are never changed: the other side of the pair moves
-// instead, and if both are locked we report a warning.
+// instead. Anchors (the backgrounds) never move either, so a lock can't
+// quietly repaint the page; if neither side may move, we report a warning.
 // Fixing one pair can break another that shares a colour, so it repeats
 // until a full pass changes nothing.
 export function fixContrast(
   colors: Colors,
   pairs: Pair[],
-  options: { mode: Mode; locked?: Set<Role> },
+  options: { mode: Mode; locked?: Set<Role>; anchors?: Set<Role> },
 ): { adjusted: Colors; fixes: Fix[]; warnings: string[] } {
   const adjusted = { ...colors };
   const locked = options.locked ?? new Set<Role>();
+  const anchors = options.anchors ?? new Set<Role>();
+  const fixed = (role: Role) => locked.has(role) || anchors.has(role);
   const fixes = new Map<Role, Fix>();
   const warnings = new Set<string>();
 
@@ -34,9 +37,10 @@ export function fixContrast(
 
       let move: Role = pair.adjust === "bg" ? pair.bg : pair.fg;
       let other: Role = move === pair.fg ? pair.bg : pair.fg;
-      if (locked.has(move)) [move, other] = [other, move];
-      if (locked.has(move)) {
-        warnings.add(`${pair.fg} on ${pair.bg} can't reach ${pair.target}:1 because both are locked`);
+      if (fixed(move)) [move, other] = [other, move];
+      if (fixed(move)) {
+        const ratio = contrast(adjusted[pair.fg], adjusted[pair.bg]);
+        warnings.add(`${pair.fg} on ${pair.bg} is ${ratio.toFixed(1)}:1, below ${pair.target}:1`);
         continue;
       }
 
