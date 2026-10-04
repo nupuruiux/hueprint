@@ -1,16 +1,19 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { buildOptions, describeSwatches, type Mode, type Role, type Strategy } from "@/lib/theme";
 import { parseThemeState, serializeThemeState, type ThemeState } from "@/lib/theme-url";
+import { ExportPanel } from "./ExportPanel";
 import { OptionTiles } from "./OptionTiles";
 import { LivePreview } from "./preview/LivePreview";
 import { TokenPanel } from "./TokenPanel";
 
 // The interactive part of the theme page. All state lives in the URL, so
 // every change is shareable and the back button works as expected.
-export function ThemeStudio({ swatches: raw }: { swatches: { hex: string; population: number }[] }) {
+type Props = { title: string; swatches: { hex: string; population: number }[] };
+
+export function ThemeStudio({ title, swatches: raw }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -21,6 +24,20 @@ export function ThemeStudio({ swatches: raw }: { swatches: { hex: string; popula
   // This only re-runs when the URL changes, and the engine takes milliseconds.
   const options = buildOptions(swatches, state.locks);
   const theme = options[state.strategy];
+
+  // Show the sticky export bar once the direction tiles have scrolled
+  // above the top of the screen.
+  const tilesRef = useRef<HTMLDivElement>(null);
+  const [pastTiles, setPastTiles] = useState(false);
+  useEffect(() => {
+    const tiles = tilesRef.current;
+    if (!tiles) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setPastTiles(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+    });
+    observer.observe(tiles);
+    return () => observer.disconnect();
+  }, []);
 
   function update(next: Partial<ThemeState>) {
     const query = serializeThemeState({ ...state, ...next }, params).toString();
@@ -36,12 +53,14 @@ export function ThemeStudio({ swatches: raw }: { swatches: { hex: string; popula
 
   return (
     <div className="space-y-16">
-      <OptionTiles
-        options={options}
-        selected={state.strategy}
-        mode={state.mode}
-        onSelect={(strategy: Strategy) => update({ strategy })}
-      />
+      <div ref={tilesRef}>
+        <OptionTiles
+          options={options}
+          selected={state.strategy}
+          mode={state.mode}
+          onSelect={(strategy: Strategy) => update({ strategy })}
+        />
+      </div>
       {/* Right after the tiles, so you see the dashboard react as you pick. */}
       <LivePreview tokens={theme[state.mode]} mode={state.mode} onModeChange={(mode) => update({ mode })} />
       <TokenPanel
@@ -53,6 +72,7 @@ export function ThemeStudio({ swatches: raw }: { swatches: { hex: string; popula
         onLock={(role, hex) => setLock(state.mode, role, hex)}
         onResetLocks={() => update({ locks: { ...state.locks, [state.mode]: {} } })}
       />
+      <ExportPanel theme={theme} defaultName={title} visible={pastTiles} />
     </div>
   );
 }

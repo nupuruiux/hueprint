@@ -19,6 +19,11 @@ describe("toCSS", () => {
     }
   });
 
+  it("puts the theme name in the header comment", () => {
+    expect(toCSS(theme, "Water Lilies")).toMatch(/^\/\* Water Lilies · faithful · made with Hueprint/);
+    expect(toTailwind(theme, "Water Lilies")).toContain("// tailwind.config.js · Water Lilies (faithful)");
+  });
+
   it("has balanced braces (valid block structure)", () => {
     expect(css.split("{").length).toBe(css.split("}").length);
   });

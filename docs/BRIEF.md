@@ -138,7 +138,7 @@ Every feature gets an issue, a branch and a pull request.
 
 **Weekend 3: Preview, export, upload**
 - [x] Live dashboard + mobile preview
-- [ ] Export panel (CSS, Tailwind, JSON) + share link
+- [x] Export panel (CSS, Tailwind, JSON) + share link
 - [ ] Upload flow
 
 **Weekend 4: Polish and ship**
