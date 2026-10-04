@@ -2,20 +2,20 @@
 // Tokens (DTCG) JSON, which Tokens Studio can import into Figma.
 import { ROLES, STEPS, type ModeTokens, type Theme } from "./types";
 
-export function toCSS(theme: Theme): string {
+export function toCSS(theme: Theme, name = "Hueprint theme"): string {
   const block = (selector: string, tokens: ModeTokens) =>
     `${selector} {\n${ROLES.map((role) => `  --color-${role}: ${tokens[role].hex};`).join("\n")}\n}`;
   return [
-    `/* Hueprint theme · ${theme.strategy}. Every text pair passes WCAG AA. */`,
+    `/* ${name} · ${theme.strategy} · made with Hueprint. Every text pair passes WCAG AA. */`,
     block(":root", theme.light),
     block('[data-theme="dark"]', theme.dark),
   ].join("\n\n") + "\n";
 }
 
 // Colours point at the CSS variables, so light/dark switching keeps working.
-export function toTailwind(theme: Theme): string {
+export function toTailwind(theme: Theme, name = "Hueprint theme"): string {
   const colors = ROLES.map((role) => `        "${role}": "var(--color-${role})",`).join("\n");
-  return `// tailwind.config.js · Hueprint theme (${theme.strategy}).
+  return `// tailwind.config.js · ${name} (${theme.strategy}), made with Hueprint.
 // Use together with the CSS variables export.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
