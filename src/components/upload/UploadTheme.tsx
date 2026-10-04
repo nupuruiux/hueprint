@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { extractColors } from "@/lib/theme/extract";
 import type { Swatch } from "@/lib/theme";
 import { ThemeStudio } from "@/components/theme/ThemeStudio";
+import { MixingPaint } from "@/components/states/MixingPaint";
 import { DropZone } from "./DropZone";
 import { useUpload } from "./UploadProvider";
 
@@ -18,8 +19,12 @@ export function UploadTheme() {
   useEffect(() => {
     if (!upload) return;
     let cancelled = false;
-    extractColors(upload.url)
-      .then((swatches) => !cancelled && setResult({ url: upload.url, swatches }))
+    // Extraction is quick, so the "mixing paint" moment gets ~1.2s to register
+    // instead of flashing past (skipped for people who prefer less motion).
+    const minimum = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1200;
+    const pause = new Promise((resolve) => setTimeout(resolve, minimum));
+    Promise.all([extractColors(upload.url), pause])
+      .then(([swatches]) => !cancelled && setResult({ url: upload.url, swatches }))
       .catch(() => !cancelled && setFailed(true));
     return () => {
       cancelled = true;
@@ -73,21 +78,21 @@ export function UploadTheme() {
             <h2 className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Colours in this image</h2>
             {swatches ? (
               <ul className="mt-3 flex flex-wrap gap-2">
-                {swatches.map((s) => (
-                  <li key={s.hex} className="text-center">
+                {swatches.map((s, i) => (
+                  <li key={i} className="text-center">
                     <span className="block h-12 w-12 rounded-md ring-1 ring-ink/10" style={{ background: s.hex }} />
                     <span className="mt-1 block font-mono text-[10px] uppercase text-ink-muted">{s.hex}</span>
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="mt-3 font-display text-xl italic text-ink-muted">Mixing paint…</p>
+              <p className="mt-3 text-sm text-ink-muted">Reading the image…</p>
             )}
           </div>
         </div>
       </header>
 
-      {swatches && <ThemeStudio title={upload.name} swatches={swatches} shareable={false} />}
+      {swatches ? <ThemeStudio title={upload.name} swatches={swatches} shareable={false} /> : <MixingPaint />}
     </>
   );
 }
