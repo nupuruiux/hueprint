@@ -56,7 +56,7 @@ const MOVEMENTS = [
 const HERO_IDS = [
   95998, // Rembrandt, Old Man with a Gold Chain
   4081, // Moroni, Gian Lodovico Madruzzo
-  59847, // Manfredi, Cupid Chastised
+  111317, // Ingres, Amédée-David, the Comte de Pastoret
   4788, // Reynolds, Lady Sarah Bunbury Sacrificing to the Graces
   23972, // Correggio, Virgin and Child with the Young Saint John
 ];

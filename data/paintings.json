@@ -165,7 +165,7 @@
         "population": 354
       }
     ],
-    "hero": true,
+    "hero": false,
     "moods": [
       "warm",
       "vivid"
@@ -383,7 +383,7 @@
     "hero": false,
     "moods": [
       "warm",
-      "vivid"
+      "muted"
     ]
   },
   {
@@ -1502,6 +1502,49 @@
     "moods": [
       "warm",
       "muted"
+    ]
+  },
+  {
+    "id": 111317,
+    "title": "Amédée-David, the Comte de Pastoret",
+    "artist_title": "Jean Auguste Dominique Ingres",
+    "date_display": "1823–26",
+    "style_title": "19th century",
+    "movement": "Romantic & Realist",
+    "image_id": "8d119fd0-2f57-f20e-a3f5-a573904001e9",
+    "width": 5360,
+    "height": 6633,
+    "credit": "Estate of Dorothy Eckhart Williams; Robert Allerton, Bertha E. Brown, and Major Acquisitions funds · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#b88b70",
+        "population": 3954
+      },
+      {
+        "hex": "#70533c",
+        "population": 2980
+      },
+      {
+        "hex": "#240c04",
+        "population": 6
+      },
+      {
+        "hex": "#e54c19",
+        "population": 0
+      },
+      {
+        "hex": "#f1a287",
+        "population": 0
+      },
+      {
+        "hex": "#892d0f",
+        "population": 0
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "vivid"
     ]
   },
   {
