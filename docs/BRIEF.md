@@ -133,7 +133,7 @@ Every feature gets an issue, a branch and a pull request.
 
 **Weekend 2: Gallery and theme engine**
 - [x] Landing page: hero, swatch marquee, filters, gallery with hover/tap states
-- [ ] Theme engine in `lib/theme/` + unit tests (Vitest)
+- [x] Theme engine in `lib/theme/` + unit tests (Vitest)
 - [ ] Theme page: painting header, Faithful / Soft / Bold options, token system with light/dark, lock, swap, copy
 
 **Weekend 3: Preview, export, upload**

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { contrastRatio } from "@/lib/theme/primary";
+import { contrast } from "@/lib/theme";
 
 const SIZE = 120; // loupe diameter, px
 const ZOOM = 2.5; // magnification inside the loupe
@@ -131,7 +131,7 @@ export function HeroLoupe({ src, objectPosition }: Props) {
                   type="button"
                   onClick={() => copy(hex)}
                   className="h-11 w-16 rounded-md px-1.5 pt-5 text-left font-mono text-[10px] uppercase shadow-lg transition-transform hover:-translate-y-0.5"
-                  style={{ background: hex, color: contrastRatio("#ffffff", hex) >= contrastRatio("#1f1a17", hex) ? "#ffffff" : "#1f1a17" }}
+                  style={{ background: hex, color: contrast("#ffffff", hex) >= contrast("#1f1a17", hex) ? "#ffffff" : "#1f1a17" }}
                   aria-label={`Copy ${hex.toUpperCase()}`}
                 >
                   {copied === hex ? "Copied" : hex}
