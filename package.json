@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "fetch:paintings": "node scripts/fetch-paintings.ts"
+    "fetch:paintings": "node scripts/fetch-paintings.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "culori": "^4.0.2",
@@ -20,13 +22,14 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/culori": "^4.0.1",
-    "@types/node": "^20",
+    "@types/node": "^24.19.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.3"
   },
   "type": "module"
 }
