@@ -1,31 +1,67 @@
 @import "tailwindcss";
 
-/* Hueprint's own UI colours (not the generated themes).
-   Both pairs pass WCAG AA: muted on background is ~7.8:1 (light) / ~8:1 (dark). */
+/*
+  Hueprint's own design tokens: the site chrome, NOT the generated themes.
+  Generated themes get their own variables, scoped to the preview containers,
+  so the site never changes colour when a theme does.
+
+  Contrast (WCAG, checked):
+    ink on paper            15.3:1  body text
+    ink-muted on paper       6.6:1  secondary text (5.9:1 on paper-deep)
+    rosewood on paper        8.9:1  links, accent text
+    paper on rosewood        8.9:1  text on accent buttons
+    rosewood-light on paper  3.6:1  DECORATION ONLY: stickers, hovers, large display type
+    paper on night          16.7:1  text over the dark hero
+  line is a decorative hairline (1.4:1); use ink-muted for borders that must be seen (inputs).
+*/
+@theme {
+  --color-paper: #f6f1ea;
+  --color-paper-deep: #ede5da;
+  --color-ink: #1f1a17;
+  --color-ink-muted: #5e544d;
+  --color-line: #d9cfc2;
+  --color-rosewood: #7a1f3d;
+  --color-rosewood-light: #b5677d;
+  --color-night: #14110f;
+
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  /* Motion: short and smooth, 200–400 ms ease-out. */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --default-transition-duration: 250ms;
+  --default-transition-timing-function: var(--ease-soft);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --muted: #525252;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted: #a3a3a3;
-  }
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* One visible focus ring everywhere, in the accent. */
+:focus-visible {
+  outline: 2px solid var(--color-rosewood);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Over the dark hero, the ring switches to paper so it stays visible. */
+.on-dark :focus-visible {
+  outline-color: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
