@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { buildOptions, describeSwatches, type Mode, type Role, type Strategy } from "@/lib/theme";
 import { parseThemeState, serializeThemeState, type ThemeState } from "@/lib/theme-url";
 import { OptionTiles } from "./OptionTiles";
+import { LivePreview } from "./preview/LivePreview";
 import { TokenPanel } from "./TokenPanel";
 
 // The interactive part of the theme page. All state lives in the URL, so
@@ -41,6 +42,8 @@ export function ThemeStudio({ swatches: raw }: { swatches: { hex: string; popula
         mode={state.mode}
         onSelect={(strategy: Strategy) => update({ strategy })}
       />
+      {/* Right after the tiles, so you see the dashboard react as you pick. */}
+      <LivePreview tokens={theme[state.mode]} mode={state.mode} onModeChange={(mode) => update({ mode })} />
       <TokenPanel
         theme={theme}
         mode={state.mode}
