@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { HeroLoupe } from "./HeroLoupe";
 import { HeroRedlines, type RedlineRole } from "./HeroRedlines";
@@ -32,10 +33,27 @@ export function HeroRotator({ slides, startIndex, children }: Props) {
   const [prevIndex, setPrevIndex] = useState<number | null>(null);
   const [hovering, setHovering] = useState(false);
   const [focused, setFocused] = useState(false);
-  const [userPaused, setUserPaused] = useState(false);
+  // The Pause/Play button sets a choice. Until someone presses it, people who
+  // ask their system for less motion get a still hero (starts paused).
+  const reduceMotion = useReducedMotion();
+  const [choice, setChoice] = useState<"paused" | "playing" | null>(null);
+  const userPaused = choice ? choice === "paused" : !!reduceMotion;
 
   const slide = slides[index];
   const next = (index + 1) % slides.length;
+
+  // Preload the next painting only once the page has finished loading, so it
+  // doesn't compete with the first painting and the fonts for bandwidth.
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const done = () => setLoaded(true);
+    if (document.readyState === "complete") {
+      const id = requestAnimationFrame(done);
+      return () => cancelAnimationFrame(id);
+    }
+    window.addEventListener("load", done, { once: true });
+    return () => window.removeEventListener("load", done);
+  }, []);
 
   // The countdown. Re-runs (= restarts from 10 s) whenever the painting
   // changes or a pause ends, because those values are its dependencies.
@@ -79,7 +97,7 @@ export function HeroRotator({ slides, startIndex, children }: Props) {
           and the next one (loading invisibly, ready for its fade-in).
           The other paintings aren't loaded until their turn. */}
       {slides.map((s, i) =>
-        i === index || i === next || i === prevIndex ? (
+        i === index || (i === next && loaded) || i === prevIndex ? (
           <Image
             key={s.id}
             src={s.src}
@@ -126,7 +144,7 @@ export function HeroRotator({ slides, startIndex, children }: Props) {
         <p className="sr-only sm:hidden">{slide.credit}</p>
         <button
           type="button"
-          onClick={() => setUserPaused((p) => !p)}
+          onClick={() => setChoice(userPaused ? "playing" : "paused")}
           aria-label={userPaused ? "Resume painting rotation" : "Pause painting rotation"}
           className="flex shrink-0 items-center gap-1.5 rounded-full border border-paper/50 px-2.5 py-1 font-medium text-paper hover:border-paper"
         >

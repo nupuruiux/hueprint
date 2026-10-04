@@ -37,6 +37,7 @@
   --animate-draw: draw 0.7s var(--ease-soft) both;
   --animate-pop: pop 0.4s var(--ease-soft) both;
   --animate-label: label 0.4s var(--ease-soft) both;
+  --animate-mix: mix 1.4s var(--ease-soft) infinite alternate;
 
   @keyframes float {
     0%, 100% { translate: 0 0; }
@@ -54,6 +55,11 @@
   @keyframes pop {
     from { transform: scale(0); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+  }
+  /* Mixing paint: from a swirl (rotate out to a ring) to a tidy swatch slot. */
+  @keyframes mix {
+    from { transform: rotate(var(--a)) translateX(64px) rotate(calc(var(--a) * -1)) scale(0.6); }
+    to { transform: translate(var(--x), var(--y)) scale(1); }
   }
   @keyframes label {
     from { opacity: 0; translate: 0 6px; }

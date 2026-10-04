@@ -25,6 +25,8 @@ const BADGES: Partial<Record<Role, { fg: Role; bg: Role; target: number }>> = {
 };
 
 // Roles that are backgrounds get an "Aa" sample of what sits on them.
+// (Not primary-disabled: disabled controls are exempt from contrast rules,
+// so a text sample there would suggest a readability it doesn't promise.)
 const SAMPLE_TEXT: Partial<Record<Role, Role>> = {
   background: "text",
   surface: "text",
@@ -32,7 +34,6 @@ const SAMPLE_TEXT: Partial<Record<Role, Role>> = {
   primary: "on-primary",
   "primary-hover": "on-primary",
   "primary-pressed": "on-primary",
-  "primary-disabled": "on-primary",
 };
 
 type Props = {
@@ -158,9 +159,9 @@ function SwapMenu({ role, current, swatches, onPick }: { role: Role; current: st
         <span className="absolute right-0 top-full z-20 mt-1 block w-60 rounded-md border border-line bg-paper p-3 shadow-xl">
           <span className="block text-xs font-semibold">Swap {role} for…</span>
           <span className="mt-2 grid grid-cols-4 gap-2">
-            {swatches.map((s) => (
+            {swatches.map((s, i) => (
               <button
-                key={s.hex}
+                key={i}
                 type="button"
                 aria-label={`Use ${s.hex}`}
                 aria-current={s.hex === current || undefined}
