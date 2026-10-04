@@ -122,7 +122,7 @@ Every feature gets an issue, a branch and a pull request.
 5. Check the preview, then merge into `main`; the live site updates automatically.
 
 **Weekend 1: Foundations**
-- [ ] Create the GitHub repo, Next.js app, Tailwind, `.gitignore`
+- [x] Create the GitHub repo, Next.js app, Tailwind, `.gitignore`
 - [ ] Connect Vercel and get a live URL
 - [ ] Upload an image and show its extracted colours
 
