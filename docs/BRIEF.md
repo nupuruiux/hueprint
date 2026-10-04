@@ -144,7 +144,7 @@ Every feature gets an issue, a branch and a pull request.
 **Weekend 4: Polish and ship**
 - [x] Loading, empty, error and 404 states; reduced motion; accessibility pass; Lighthouse 90+
 - [ ] Typography pass: replace Instrument Serif + Inter Tight with a more distinctive pairing (compare 3–4 on a type specimen page first)
-- [ ] README with screenshots, a short demo GIF and setup steps
+- [x] README with screenshots, a short demo GIF and setup steps
 - [ ] Write the case study
 
 **After the MVP**
@@ -154,7 +154,7 @@ Every feature gets an issue, a branch and a pull request.
 
 ## Definition of done
 
-- [ ] Live URL anyone can try without signing up
-- [ ] Every generated theme passes WCAG AA for text by default
+- [x] Live URL anyone can try without signing up
+- [x] Every generated theme passes WCAG AA for text by default
 - [ ] Five real people tried it
 - [ ] Repo has a clean README and at least 10 merged PRs
