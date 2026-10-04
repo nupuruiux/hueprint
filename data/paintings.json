@@ -1,0 +1,1679 @@
+[
+  {
+    "id": 87479,
+    "title": "The Assumption of the Virgin",
+    "artist_title": "Domenico Theotokópoulos, called El Greco",
+    "date_display": "1577–79",
+    "style_title": "Mannerism",
+    "movement": "Old Masters",
+    "image_id": "47fd1564-93f5-f30b-7786-013421133b4a",
+    "width": 3990,
+    "height": 7631,
+    "credit": "Gift of Nancy Atwood Sprague in memory of Albert Arnold Sprague · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#b29c79",
+        "population": 3309
+      },
+      {
+        "hex": "#5e3f31",
+        "population": 2687
+      },
+      {
+        "hex": "#184063",
+        "population": 1007
+      },
+      {
+        "hex": "#cebe8d",
+        "population": 442
+      },
+      {
+        "hex": "#a47c44",
+        "population": 1
+      },
+      {
+        "hex": "#a45c5c",
+        "population": 1
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 15468,
+    "title": "Saint George and the Dragon",
+    "artist_title": "Bernat Martorell",
+    "date_display": "1434–35",
+    "style_title": "Renaissance",
+    "movement": "Old Masters",
+    "image_id": "8a0e4ac9-43ea-bc3e-884b-ee27f8a10501",
+    "width": 6524,
+    "height": 10455,
+    "credit": "Gift of Mrs. Richard E. Danielson and Mrs. Chauncey McCormick · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#c5b39b",
+        "population": 4278
+      },
+      {
+        "hex": "#a4825b",
+        "population": 4122
+      },
+      {
+        "hex": "#6c4d19",
+        "population": 3655
+      },
+      {
+        "hex": "#af6b15",
+        "population": 522
+      },
+      {
+        "hex": "#3f3e20",
+        "population": 336
+      },
+      {
+        "hex": "#dcb499",
+        "population": 59
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 80084,
+    "title": "The Crucifixion",
+    "artist_title": "Francisco de Zurbarán",
+    "date_display": "1627",
+    "style_title": "Renaissance",
+    "movement": "Old Masters",
+    "image_id": "c8ee825f-bc8c-c76b-1f05-5d692d9a6b47",
+    "width": 9583,
+    "height": 16906,
+    "credit": "Robert A. Waller Memorial Fund · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#554330",
+        "population": 354
+      },
+      {
+        "hex": "#947b60",
+        "population": 30
+      },
+      {
+        "hex": "#3c2414",
+        "population": 27
+      },
+      {
+        "hex": "#7c5c34",
+        "population": 3
+      },
+      {
+        "hex": "#d7bfa1",
+        "population": 0
+      },
+      {
+        "hex": "#6b4f2d",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 59847,
+    "title": "Cupid Chastised",
+    "artist_title": "Bartolomeo Manfredi",
+    "date_display": "1613",
+    "style_title": "Renaissance",
+    "movement": "Old Masters",
+    "image_id": "0f951635-312c-0829-451b-553f461c5518",
+    "width": 7445,
+    "height": 10426,
+    "credit": "Charles H. and Mary F. S. Worcester Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#be9d76",
+        "population": 9652
+      },
+      {
+        "hex": "#504234",
+        "population": 4248
+      },
+      {
+        "hex": "#d2c4b4",
+        "population": 1834
+      },
+      {
+        "hex": "#a9532d",
+        "population": 761
+      },
+      {
+        "hex": "#5c758f",
+        "population": 745
+      },
+      {
+        "hex": "#6b2215",
+        "population": 354
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 5848,
+    "title": "Landscape with Saint John on Patmos",
+    "artist_title": "Nicolas Poussin",
+    "date_display": "1640",
+    "style_title": "Renaissance",
+    "movement": "Old Masters",
+    "image_id": "aa870b0d-5a1b-660a-6dc6-56c12109cf6e",
+    "width": 6092,
+    "height": 4508,
+    "credit": "A. A. Munger Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#624632",
+        "population": 1577
+      },
+      {
+        "hex": "#708fa6",
+        "population": 789
+      },
+      {
+        "hex": "#6c9cba",
+        "population": 149
+      },
+      {
+        "hex": "#74250e",
+        "population": 8
+      },
+      {
+        "hex": "#8db4d4",
+        "population": 6
+      },
+      {
+        "hex": "#99bccc",
+        "population": 3
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 869,
+    "title": "The Watermill with the Great Red Roof",
+    "artist_title": "Meindert Hobbema",
+    "date_display": "c. 1665",
+    "style_title": "Realism",
+    "movement": "Romantic & Realist",
+    "image_id": "237c25a2-6051-a8e7-1610-a01938d4deab",
+    "width": 9443,
+    "height": 6967,
+    "credit": "Gift of Mr. and Mrs. Frank G. Logan · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#504329",
+        "population": 1147
+      },
+      {
+        "hex": "#d5b78f",
+        "population": 80
+      },
+      {
+        "hex": "#beb49a",
+        "population": 46
+      },
+      {
+        "hex": "#a28c54",
+        "population": 4
+      },
+      {
+        "hex": "#342c0c",
+        "population": 1
+      },
+      {
+        "hex": "#dac19e",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 4796,
+    "title": "Fishing Boats with Hucksters Bargaining for Fish",
+    "artist_title": "Joseph Mallord William Turner",
+    "date_display": "1837–38",
+    "style_title": "19th century",
+    "movement": "Romantic & Realist",
+    "image_id": "8641479e-c93e-f1a8-9925-19be061706da",
+    "width": 8912,
+    "height": 6887,
+    "credit": "Mr. and Mrs. W. W. Kimball Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#c3a987",
+        "population": 1779
+      },
+      {
+        "hex": "#554834",
+        "population": 333
+      },
+      {
+        "hex": "#5c482a",
+        "population": 330
+      },
+      {
+        "hex": "#a28159",
+        "population": 307
+      },
+      {
+        "hex": "#e4bb8c",
+        "population": 85
+      },
+      {
+        "hex": "#c18939",
+        "population": 3
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 20579,
+    "title": "Hercules and the Lernaean Hydra",
+    "artist_title": "Gustave Moreau",
+    "date_display": "1875–76",
+    "style_title": "nineteenth century",
+    "movement": "Romantic & Realist",
+    "image_id": "2ae64c8a-266d-470a-a25a-c83127564636",
+    "width": 7262,
+    "height": 8384,
+    "credit": "Gift of Mrs. Eugene A. Davidson · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#50412b",
+        "population": 2775
+      },
+      {
+        "hex": "#a18358",
+        "population": 269
+      },
+      {
+        "hex": "#9f7449",
+        "population": 148
+      },
+      {
+        "hex": "#c7b48a",
+        "population": 74
+      },
+      {
+        "hex": "#6c2e13",
+        "population": 13
+      },
+      {
+        "hex": "#bcac94",
+        "population": 1
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 16499,
+    "title": "Jesus Mocked by the Soldiers",
+    "artist_title": "Édouard Manet",
+    "date_display": "1865",
+    "style_title": "Realism",
+    "movement": "Romantic & Realist",
+    "image_id": "4d03ba14-a01a-d003-404a-cf3f9fb40ede",
+    "width": 12580,
+    "height": 16162,
+    "credit": "Gift of James Deering · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#cbbea9",
+        "population": 890
+      },
+      {
+        "hex": "#a2785a",
+        "population": 617
+      },
+      {
+        "hex": "#e6c699",
+        "population": 480
+      },
+      {
+        "hex": "#ac7127",
+        "population": 88
+      },
+      {
+        "hex": "#6e4415",
+        "population": 64
+      },
+      {
+        "hex": "#544c2c",
+        "population": 1
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 193664,
+    "title": "The Captive Slave (Ira Aldridge)",
+    "artist_title": "John Philip Simpson",
+    "date_display": "1827",
+    "style_title": "nineteenth century",
+    "movement": "Romantic & Realist",
+    "image_id": "5490fd49-dd52-4fd7-7d41-d871dcffae55",
+    "width": 9791,
+    "height": 12331,
+    "credit": "Purchased with funds provided by Mary Winton Green, Dan and Sara Green Cohan, Howard and Lisa Green and Jonathan and Brenda Green, in memory of David Green · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#682c20",
+        "population": 2646
+      },
+      {
+        "hex": "#7d3b2f",
+        "population": 1839
+      },
+      {
+        "hex": "#6b4e3f",
+        "population": 685
+      },
+      {
+        "hex": "#614031",
+        "population": 637
+      },
+      {
+        "hex": "#daa79e",
+        "population": 0
+      },
+      {
+        "hex": "#6f3429",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 20684,
+    "title": "Paris Street; Rainy Day",
+    "artist_title": "Gustave Caillebotte",
+    "date_display": "1877",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "f8fd76e9-c396-5678-36ed-6a348c904d27",
+    "width": 9987,
+    "height": 7755,
+    "credit": "Charles H. and Mary F. S. Worcester Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#0b1d23",
+        "population": 409
+      },
+      {
+        "hex": "#2c4e49",
+        "population": 179
+      },
+      {
+        "hex": "#d1c4ac",
+        "population": 31
+      },
+      {
+        "hex": "#e4d3c2",
+        "population": 29
+      },
+      {
+        "hex": "#64849c",
+        "population": 4
+      },
+      {
+        "hex": "#3ca0c2",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "muted"
+    ]
+  },
+  {
+    "id": 64818,
+    "title": "Stacks of Wheat (End of Summer)",
+    "artist_title": "Claude Monet",
+    "date_display": "1890–91",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "a38e2828-ec6f-ece1-a30f-70243449197b",
+    "width": 6884,
+    "height": 4068,
+    "credit": "Gift of Arthur M. Wood, Sr. in memory of Pauline Palmer Wood · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#746246",
+        "population": 950
+      },
+      {
+        "hex": "#c4b6a1",
+        "population": 193
+      },
+      {
+        "hex": "#a07f58",
+        "population": 101
+      },
+      {
+        "hex": "#9c8562",
+        "population": 0
+      },
+      {
+        "hex": "#514533",
+        "population": 0
+      },
+      {
+        "hex": "#cbbfad",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 16568,
+    "title": "Water Lilies",
+    "artist_title": "Claude Monet",
+    "date_display": "1906",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "3c27b499-af56-f0d5-93b5-a7f2f1ad5813",
+    "width": 8808,
+    "height": 8460,
+    "credit": "Mr. and Mrs. Martin A. Ryerson Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#5984a5",
+        "population": 1563
+      },
+      {
+        "hex": "#305a57",
+        "population": 1303
+      },
+      {
+        "hex": "#487a98",
+        "population": 1123
+      },
+      {
+        "hex": "#18525a",
+        "population": 251
+      },
+      {
+        "hex": "#8da1b4",
+        "population": 20
+      },
+      {
+        "hex": "#a5c2d4",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "vivid"
+    ]
+  },
+  {
+    "id": 14655,
+    "title": "Two Sisters (On the Terrace)",
+    "artist_title": "Pierre-Auguste Renoir",
+    "date_display": "1881",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "3a608f55-d76e-fa96-d0b1-0789fbc48f1e",
+    "width": 19848,
+    "height": 24629,
+    "credit": "Mr. and Mrs. Lewis Larned Coburn Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#2c334c",
+        "population": 2404
+      },
+      {
+        "hex": "#a29277",
+        "population": 2014
+      },
+      {
+        "hex": "#bc9585",
+        "population": 1639
+      },
+      {
+        "hex": "#1c63a4",
+        "population": 40
+      },
+      {
+        "hex": "#0c3c4d",
+        "population": 13
+      },
+      {
+        "hex": "#cc94ac",
+        "population": 1
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 111442,
+    "title": "The Child's Bath",
+    "artist_title": "Mary Cassatt",
+    "date_display": "1893",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "3b885ae0-4d46-5fe4-d70a-00474827f02c",
+    "width": 8470,
+    "height": 12853,
+    "credit": "Robert A. Waller Fund · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#604033",
+        "population": 1978
+      },
+      {
+        "hex": "#acb6bf",
+        "population": 1612
+      },
+      {
+        "hex": "#a45c5c",
+        "population": 1
+      },
+      {
+        "hex": "#6f808f",
+        "population": 0
+      },
+      {
+        "hex": "#39424a",
+        "population": 0
+      },
+      {
+        "hex": "#b4bdc5",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 28560,
+    "title": "The Bedroom",
+    "artist_title": "Vincent van Gogh",
+    "date_display": "1889",
+    "style_title": "Post-Impressionism",
+    "movement": "Post-Impressionism",
+    "image_id": "6644829f-f292-c5c4-a73c-0356a6fdbf0d",
+    "width": 12614,
+    "height": 9875,
+    "credit": "Helen Birch Bartlett Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#7290b2",
+        "population": 1754
+      },
+      {
+        "hex": "#a37409",
+        "population": 1334
+      },
+      {
+        "hex": "#beb788",
+        "population": 752
+      },
+      {
+        "hex": "#ac7807",
+        "population": 715
+      },
+      {
+        "hex": "#3a5c34",
+        "population": 6
+      },
+      {
+        "hex": "#f9d37f",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 27992,
+    "title": "A Sunday on La Grande Jatte — 1884",
+    "artist_title": "Georges Seurat",
+    "date_display": "1884–86, border added 1888–89",
+    "style_title": "Pointillism",
+    "movement": "Post-Impressionism",
+    "image_id": "2d484387-2509-5e8e-2c43-22f9981972eb",
+    "width": 9310,
+    "height": 6237,
+    "credit": "Helen Birch Bartlett Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#455149",
+        "population": 1114
+      },
+      {
+        "hex": "#9c9266",
+        "population": 535
+      },
+      {
+        "hex": "#c6bc9c",
+        "population": 3
+      },
+      {
+        "hex": "#a1915d",
+        "population": 0
+      },
+      {
+        "hex": "#544b30",
+        "population": 0
+      },
+      {
+        "hex": "#cec6aa",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 80607,
+    "title": "Self-Portrait",
+    "artist_title": "Vincent van Gogh",
+    "date_display": "1887",
+    "style_title": "Post-Impressionism",
+    "movement": "Post-Impressionism",
+    "image_id": "47c5bcb8-62ef-e5d7-55e7-f5121f409a30",
+    "width": 6116,
+    "height": 7794,
+    "credit": "Joseph Winterbotham Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#a98365",
+        "population": 3309
+      },
+      {
+        "hex": "#5a4337",
+        "population": 3026
+      },
+      {
+        "hex": "#beb193",
+        "population": 294
+      },
+      {
+        "hex": "#c4a07b",
+        "population": 185
+      },
+      {
+        "hex": "#9a5324",
+        "population": 160
+      },
+      {
+        "hex": "#7f381c",
+        "population": 31
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 61128,
+    "title": "At the Moulin Rouge",
+    "artist_title": "Henri de Toulouse-Lautrec",
+    "date_display": "1892–95",
+    "style_title": "Post-Impressionism",
+    "movement": "Post-Impressionism",
+    "image_id": "defb4004-b500-218d-3d9b-9a02423f097d",
+    "width": 7788,
+    "height": 6807,
+    "credit": "Helen Birch Bartlett Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#643c07",
+        "population": 1102
+      },
+      {
+        "hex": "#54492c",
+        "population": 563
+      },
+      {
+        "hex": "#a0906b",
+        "population": 418
+      },
+      {
+        "hex": "#826628",
+        "population": 95
+      },
+      {
+        "hex": "#dfc999",
+        "population": 0
+      },
+      {
+        "hex": "#755b24",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 111436,
+    "title": "The Basket of Apples",
+    "artist_title": "Paul Cezanne",
+    "date_display": "c. 1893",
+    "style_title": "Post-Impressionism",
+    "movement": "Post-Impressionism",
+    "image_id": "52ac8996-3460-cf71-cb42-5c4d0aa29b74",
+    "width": 12640,
+    "height": 10094,
+    "credit": "Helen Birch Bartlett Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#8c764b",
+        "population": 1395
+      },
+      {
+        "hex": "#5d4133",
+        "population": 814
+      },
+      {
+        "hex": "#c1bca6",
+        "population": 42
+      },
+      {
+        "hex": "#ac7c4e",
+        "population": 38
+      },
+      {
+        "hex": "#7d5217",
+        "population": 7
+      },
+      {
+        "hex": "#d5bca3",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 8991,
+    "title": "Improvisation No. 30 (Cannons)",
+    "artist_title": "Vasily Kandinsky",
+    "date_display": "1913",
+    "style_title": "Modernism",
+    "movement": "Modern",
+    "image_id": "b5bc6b66-9e6e-fe57-dcec-fc49e820e904",
+    "width": 10199,
+    "height": 10244,
+    "credit": "Arthur Jerome Eddy Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#946458",
+        "population": 1608
+      },
+      {
+        "hex": "#324750",
+        "population": 1554
+      },
+      {
+        "hex": "#af8d56",
+        "population": 1487
+      },
+      {
+        "hex": "#354e75",
+        "population": 1121
+      },
+      {
+        "hex": "#cca362",
+        "population": 202
+      },
+      {
+        "hex": "#c4a297",
+        "population": 176
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 109819,
+    "title": "Lozenge Composition with Yellow, Black, Blue, Red, and Gray",
+    "artist_title": "Piet Mondrian",
+    "date_display": "1921",
+    "style_title": "Modernism",
+    "movement": "Modern",
+    "image_id": "25f660ee-f1db-d13b-42a5-56df97c98ba7",
+    "width": 6578,
+    "height": 6578,
+    "credit": "Gift of Edgar Kaufmann, Jr. · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#04237b",
+        "population": 494
+      },
+      {
+        "hex": "#4e4835",
+        "population": 62
+      },
+      {
+        "hex": "#e4d464",
+        "population": 55
+      },
+      {
+        "hex": "#ccc4b7",
+        "population": 26
+      },
+      {
+        "hex": "#d6bf1c",
+        "population": 8
+      },
+      {
+        "hex": "#3e5c88",
+        "population": 6
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "vivid"
+    ]
+  },
+  {
+    "id": 111617,
+    "title": "Cabin in the Cotton",
+    "artist_title": "Horace Pippin",
+    "date_display": "c. 1931–37",
+    "style_title": "Modernism",
+    "movement": "Modern",
+    "image_id": "18dd28cc-ae57-b852-cbc4-d184c6f0555d",
+    "width": 8964,
+    "height": 5305,
+    "credit": "Purchased with funds provided by Thomas F. Pick and Mary P. Hines in memory of their mother Frances W. Pick · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#b4b2ac",
+        "population": 2490
+      },
+      {
+        "hex": "#044467",
+        "population": 39
+      },
+      {
+        "hex": "#3d6170",
+        "population": 39
+      },
+      {
+        "hex": "#74878c",
+        "population": 13
+      },
+      {
+        "hex": "#09a2f5",
+        "population": 0
+      },
+      {
+        "hex": "#7fcefa",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 27987,
+    "title": "Jacques and Berthe Lipchitz",
+    "artist_title": "Amedeo Modigliani",
+    "date_display": "1916",
+    "style_title": "Modernism",
+    "movement": "Modern",
+    "image_id": "7e649536-b186-c3f5-3e6d-0d22d5d798ef",
+    "width": 9289,
+    "height": 13930,
+    "credit": "Helen Birch Bartlett Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#533928",
+        "population": 2713
+      },
+      {
+        "hex": "#a66d4e",
+        "population": 658
+      },
+      {
+        "hex": "#b47050",
+        "population": 504
+      },
+      {
+        "hex": "#4c341c",
+        "population": 1
+      },
+      {
+        "hex": "#d7b3a2",
+        "population": 0
+      },
+      {
+        "hex": "#6b412d",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 65916,
+    "title": "Movement",
+    "artist_title": "Marsden Hartley",
+    "date_display": "1913",
+    "style_title": "Modernism",
+    "movement": "Modern",
+    "image_id": "173ec65a-bc7e-067c-fed1-1677bf5f26a9",
+    "width": 4732,
+    "height": 4762,
+    "credit": "Alfred Stieglitz Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#e1dcc7",
+        "population": 2251
+      },
+      {
+        "hex": "#db623e",
+        "population": 2236
+      },
+      {
+        "hex": "#b18f58",
+        "population": 939
+      },
+      {
+        "hex": "#334d5b",
+        "population": 582
+      },
+      {
+        "hex": "#e9988e",
+        "population": 265
+      },
+      {
+        "hex": "#88251b",
+        "population": 171
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 127644,
+    "title": "Autumn Maples with Poem Slips",
+    "artist_title": "Tosa Mitsuoki",
+    "date_display": "c. 1675",
+    "style_title": "Japanese (culture or style)",
+    "movement": "Asian Traditions",
+    "image_id": "86e919b9-d366-b3ca-d26f-4c16880474a3",
+    "width": 10760,
+    "height": 5337,
+    "credit": "Kate S. Buckingham Endowment · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#655946",
+        "population": 722
+      },
+      {
+        "hex": "#c1a988",
+        "population": 622
+      },
+      {
+        "hex": "#ac8657",
+        "population": 504
+      },
+      {
+        "hex": "#dfa264",
+        "population": 499
+      },
+      {
+        "hex": "#9d4d30",
+        "population": 484
+      },
+      {
+        "hex": "#c7663a",
+        "population": 100
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 49195,
+    "title": "Maharana Bhim Singh in Procession",
+    "artist_title": "Ghasi",
+    "date_display": "c. 1820",
+    "style_title": "South Asian",
+    "movement": "Asian Traditions",
+    "image_id": "9f08b895-4960-4bc6-5871-dc9bfab4c655",
+    "width": 4275,
+    "height": 5730,
+    "credit": "Everett and Ann McNear Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#31465b",
+        "population": 939
+      },
+      {
+        "hex": "#d2c1a6",
+        "population": 895
+      },
+      {
+        "hex": "#d47727",
+        "population": 792
+      },
+      {
+        "hex": "#ab8857",
+        "population": 426
+      },
+      {
+        "hex": "#d7b885",
+        "population": 280
+      },
+      {
+        "hex": "#94742c",
+        "population": 2
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 210511,
+    "title": "A Monumental Portrait of a Monkey",
+    "artist_title": "Unknown artist",
+    "date_display": "c. 1705–1710",
+    "style_title": "South Asian",
+    "movement": "Asian Traditions",
+    "image_id": "4c44ca9b-ed2f-154a-2d2e-c3f25ff9e7a2",
+    "width": 10145,
+    "height": 8319,
+    "credit": "Lacy Armour Fund, James and Marilynn Alsdorf Acquisition Fund · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#9c9464",
+        "population": 6869
+      },
+      {
+        "hex": "#e6cab1",
+        "population": 1759
+      },
+      {
+        "hex": "#d4b29b",
+        "population": 588
+      },
+      {
+        "hex": "#86403e",
+        "population": 149
+      },
+      {
+        "hex": "#5a3332",
+        "population": 90
+      },
+      {
+        "hex": "#c44b43",
+        "population": 26
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 185222,
+    "title": "Group Pilgrimage to the Jizo Nun",
+    "artist_title": "Ike Taiga",
+    "date_display": "1755/65",
+    "style_title": "Japanese (culture or style)",
+    "movement": "Asian Traditions",
+    "image_id": "637a65fa-a6f2-8a9f-a6f4-98fcffe2ec92",
+    "width": 3000,
+    "height": 1944,
+    "credit": "Kate S. Buckingham Endowment; Margaret Gentles Fund; Purchased with funds provided by Roger L. Weston, George and Roberta Mann, Harlow and Susan Higinbotham, Charles C. Haffner III, James M. and Carol D. Trapp · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#9f7f54",
+        "population": 2759
+      },
+      {
+        "hex": "#d4c4b1",
+        "population": 2641
+      },
+      {
+        "hex": "#dccbb3",
+        "population": 2060
+      },
+      {
+        "hex": "#966f42",
+        "population": 1925
+      },
+      {
+        "hex": "#8c6c42",
+        "population": 82
+      },
+      {
+        "hex": "#946c34",
+        "population": 13
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 11272,
+    "title": "Maize and Cockscombs",
+    "artist_title": "Unknown artist",
+    "date_display": "mid 17th century",
+    "style_title": "Japanese (culture or style)",
+    "movement": "Asian Traditions",
+    "image_id": "1914a6cb-8ec7-064e-4c99-de41637f889c",
+    "width": 3000,
+    "height": 1680,
+    "credit": "Kate S. Buckingham Endowment · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#52492e",
+        "population": 996
+      },
+      {
+        "hex": "#bc8b44",
+        "population": 697
+      },
+      {
+        "hex": "#edbc64",
+        "population": 16
+      },
+      {
+        "hex": "#c4c1bc",
+        "population": 16
+      },
+      {
+        "hex": "#ab824c",
+        "population": 13
+      },
+      {
+        "hex": "#785414",
+        "population": 2
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 14598,
+    "title": "The Beach at Sainte-Adresse",
+    "artist_title": "Claude Monet",
+    "date_display": "1867",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "95be2572-b53d-8e7b-abc9-10eb48d4fa5d",
+    "width": 6793,
+    "height": 5021,
+    "credit": "Mr. and Mrs. Lewis Larned Coburn Memorial Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#bebcb6",
+        "population": 1297
+      },
+      {
+        "hex": "#3b4045",
+        "population": 1237
+      },
+      {
+        "hex": "#748c8e",
+        "population": 881
+      },
+      {
+        "hex": "#868378",
+        "population": 0
+      },
+      {
+        "hex": "#46443e",
+        "population": 0
+      },
+      {
+        "hex": "#c0beb8",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "muted"
+    ]
+  },
+  {
+    "id": 56905,
+    "title": "Nocturne: Blue and Gold—Southampton Water",
+    "artist_title": "James McNeill Whistler",
+    "date_display": "1872",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "50034c7f-ce51-00f1-430e-a6f7efc233fc",
+    "width": 6442,
+    "height": 4256,
+    "credit": "Stickney Fund · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#54544a",
+        "population": 3958
+      },
+      {
+        "hex": "#857458",
+        "population": 27
+      },
+      {
+        "hex": "#878777",
+        "population": 0
+      },
+      {
+        "hex": "#46463e",
+        "population": 0
+      },
+      {
+        "hex": "#c0c0b8",
+        "population": 0
+      },
+      {
+        "hex": "#515147",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 109780,
+    "title": "Love of Winter",
+    "artist_title": "George Wesley Bellows",
+    "date_display": "1914",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "18ab0c35-e35c-0216-9afd-f93357920db1",
+    "width": 5767,
+    "height": 4577,
+    "credit": "Friends of American Art Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#609297",
+        "population": 1166
+      },
+      {
+        "hex": "#3c646b",
+        "population": 1059
+      },
+      {
+        "hex": "#9fc1b5",
+        "population": 1021
+      },
+      {
+        "hex": "#04506e",
+        "population": 884
+      },
+      {
+        "hex": "#499aae",
+        "population": 626
+      },
+      {
+        "hex": "#e0e9d1",
+        "population": 527
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "vivid"
+    ]
+  },
+  {
+    "id": 95998,
+    "title": "Old Man with a Gold Chain",
+    "artist_title": "Rembrandt van Rijn",
+    "date_display": "1631",
+    "style_title": "Renaissance",
+    "movement": "Old Masters",
+    "image_id": "3eaab3a3-2b47-9fdd-121c-050f6b8d9ccb",
+    "width": 9859,
+    "height": 10740,
+    "credit": "Mr. and Mrs. W. W. Kimball Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#594936",
+        "population": 11561
+      },
+      {
+        "hex": "#af8353",
+        "population": 187
+      },
+      {
+        "hex": "#715c3d",
+        "population": 47
+      },
+      {
+        "hex": "#a09588",
+        "population": 19
+      },
+      {
+        "hex": "#b69466",
+        "population": 3
+      },
+      {
+        "hex": "#583814",
+        "population": 2
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 110507,
+    "title": "In the Sea",
+    "artist_title": "Arnold Böcklin",
+    "date_display": "1883",
+    "style_title": "19th century",
+    "movement": "Romantic & Realist",
+    "image_id": "fa81bfb9-5a07-5e3c-33b4-4efde68981c8",
+    "width": 9162,
+    "height": 6905,
+    "credit": "Joseph Winterbotham Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#4a3d37",
+        "population": 1660
+      },
+      {
+        "hex": "#8a8476",
+        "population": 1590
+      },
+      {
+        "hex": "#042b2a",
+        "population": 566
+      },
+      {
+        "hex": "#cfc6a6",
+        "population": 191
+      },
+      {
+        "hex": "#15e9e3",
+        "population": 0
+      },
+      {
+        "hex": "#85f3f0",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 23972,
+    "title": "Virgin and Child with the Young Saint John the Baptist",
+    "artist_title": "Antonio da Correggio",
+    "date_display": "c. 1515",
+    "style_title": "16th Century",
+    "movement": "Old Masters",
+    "image_id": "d63b9402-c42b-cce3-aa63-6d213ad621cd",
+    "width": 3968,
+    "height": 5096,
+    "credit": "Clyde M. Carr Fund · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#2f2a19",
+        "population": 8549
+      },
+      {
+        "hex": "#a87d54",
+        "population": 4088
+      },
+      {
+        "hex": "#a83423",
+        "population": 2525
+      },
+      {
+        "hex": "#801a10",
+        "population": 2355
+      },
+      {
+        "hex": "#d1bcae",
+        "population": 1588
+      },
+      {
+        "hex": "#cfb199",
+        "population": 1089
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  },
+  {
+    "id": 72801,
+    "title": "Icebound",
+    "artist_title": "John Henry Twachtman",
+    "date_display": "c. 1889",
+    "style_title": "Impressionism",
+    "movement": "Impressionism",
+    "image_id": "3ae75415-0551-ae17-c478-3b8687a6f246",
+    "width": 4707,
+    "height": 3938,
+    "credit": "Friends of American Art Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#4a6d6d",
+        "population": 1672
+      },
+      {
+        "hex": "#b8c9c5",
+        "population": 1654
+      },
+      {
+        "hex": "#79999b",
+        "population": 1356
+      },
+      {
+        "hex": "#8cb5cc",
+        "population": 5
+      },
+      {
+        "hex": "#28495b",
+        "population": 0
+      },
+      {
+        "hex": "#a3c3d6",
+        "population": 0
+      }
+    ],
+    "hero": false,
+    "moods": [
+      "cool",
+      "muted"
+    ]
+  },
+  {
+    "id": 4788,
+    "title": "Lady Sarah Bunbury Sacrificing to the Graces",
+    "artist_title": "Sir Joshua Reynolds",
+    "date_display": "1763–65",
+    "style_title": "18th Century",
+    "movement": "Old Masters",
+    "image_id": "5a047a1c-d36e-e88d-05e7-845d3936159b",
+    "width": 5401,
+    "height": 8921,
+    "credit": "Mr. and Mrs. W. W. Kimball Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#998169",
+        "population": 12371
+      },
+      {
+        "hex": "#695536",
+        "population": 11579
+      },
+      {
+        "hex": "#d4b8aa",
+        "population": 2268
+      },
+      {
+        "hex": "#dcbba8",
+        "population": 600
+      },
+      {
+        "hex": "#614114",
+        "population": 53
+      },
+      {
+        "hex": "#b4742b",
+        "population": 19
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "muted"
+    ]
+  },
+  {
+    "id": 4081,
+    "title": "Gian Lodovico Madruzzo",
+    "artist_title": "Giovanni Battista Moroni",
+    "date_display": "1551–52",
+    "style_title": "sixteenth century",
+    "movement": "Old Masters",
+    "image_id": "bc24fe7f-4171-c785-bff2-b2ed3777a47d",
+    "width": 6748,
+    "height": 11727,
+    "credit": "Charles H. and Mary F. S. Worcester Collection · Art Institute of Chicago",
+    "swatches": [
+      {
+        "hex": "#5e4728",
+        "population": 3524
+      },
+      {
+        "hex": "#987751",
+        "population": 1555
+      },
+      {
+        "hex": "#a16642",
+        "population": 1283
+      },
+      {
+        "hex": "#604334",
+        "population": 395
+      },
+      {
+        "hex": "#cac6ae",
+        "population": 237
+      },
+      {
+        "hex": "#c4a782",
+        "population": 36
+      }
+    ],
+    "hero": true,
+    "moods": [
+      "warm",
+      "vivid"
+    ]
+  }
+]
