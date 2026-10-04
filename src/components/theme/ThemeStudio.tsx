@@ -11,9 +11,10 @@ import { TokenPanel } from "./TokenPanel";
 
 // The interactive part of the theme page. All state lives in the URL, so
 // every change is shareable and the back button works as expected.
-type Props = { title: string; swatches: { hex: string; population: number }[] };
+// shareable: false for uploads, whose image can't travel in a link.
+type Props = { title: string; swatches: { hex: string; population: number }[]; shareable?: boolean };
 
-export function ThemeStudio({ title, swatches: raw }: Props) {
+export function ThemeStudio({ title, swatches: raw, shareable = true }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -72,7 +73,7 @@ export function ThemeStudio({ title, swatches: raw }: Props) {
         onLock={(role, hex) => setLock(state.mode, role, hex)}
         onResetLocks={() => update({ locks: { ...state.locks, [state.mode]: {} } })}
       />
-      <ExportPanel theme={theme} defaultName={title} visible={pastTiles} />
+      <ExportPanel theme={theme} defaultName={title} visible={pastTiles} shareable={shareable} />
     </div>
   );
 }
