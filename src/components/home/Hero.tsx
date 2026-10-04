@@ -1,39 +1,30 @@
 import Link from "next/link";
 import { altText, creditLine, heroFocus, heroPaintings, movements, paintings, slugify, toRoman } from "@/lib/paintings";
-import { oklch } from "culori";
-import { buttonColors, contrastRatio, pickPrimary } from "@/lib/theme/primary";
+import { buildTheme, contrast, describeSwatches, wcagLevel } from "@/lib/theme";
 import { HeroRotator, type HeroSlide } from "./HeroRotator";
 
 // Full-bleed painting + hairline frame, after Shopify Winter '26.
 // The site's accent here comes from the painting itself: the CTA and the
 // floating UI pieces use that painting's primary colour.
-// Colours for every hero painting are worked out here on the server; the
+// Each hero painting's Faithful theme is built here on the server; the
 // rotator (client) just switches between them.
 export function Hero({ startIndex }: { startIndex: number }) {
   const slides: HeroSlide[] = heroPaintings.map((p) => {
-    const primary = pickPrimary(p.swatches);
-    const button = buttonColors(primary);
-
-    // Stand-in roles for the redlines until the theme engine (step 3):
-    // surface = the painting's lightest colour, text = its darkest.
-    const byLightness = [...p.swatches].sort((a, b) => (oklch(b.hex)?.l ?? 0) - (oklch(a.hex)?.l ?? 0));
-    const surface = byLightness[0].hex;
-    const text = byLightness[byLightness.length - 1].hex;
-    const ratio = contrastRatio(text, surface);
-    const level = ratio >= 7 ? "AAA" : ratio >= 4.5 ? "AA" : "below AA";
+    const { light } = buildTheme(describeSwatches(p.swatches), "faithful");
+    const ratio = contrast(light.text.hex, light.background.hex);
     return {
       id: p.id,
       src: `/paintings/${p.id}.jpg`,
       alt: altText(p),
       focus: heroFocus(p),
       credit: creditLine(p),
-      primary,
-      buttonBg: button.bg,
-      buttonText: button.text,
+      primary: light.primary.hex,
+      buttonBg: light.primary.hex,
+      buttonText: light["on-primary"].hex,
       roles: [
-        { name: "primary", hex: primary },
-        { name: "text", hex: text, note: `${ratio.toFixed(1)}:1 ${level}` },
-        { name: "surface", hex: surface },
+        { name: "primary", hex: light.primary.hex },
+        { name: "text", hex: light.text.hex, note: `${ratio.toFixed(1)}:1 ${wcagLevel(ratio)}` },
+        { name: "surface", hex: light.surface.hex },
       ],
     };
   });

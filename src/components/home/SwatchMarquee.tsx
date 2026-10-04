@@ -1,10 +1,10 @@
 import { paintings } from "@/lib/paintings";
-import { contrastRatio, pickPrimary } from "@/lib/theme/primary";
+import { contrast, describeSwatches, pickPrimary } from "@/lib/theme";
 
 // A slow strip of real colours: each painting's primary. Decorative, so
 // hidden from screen readers. Pauses on hover; static with reduced motion.
 export function SwatchMarquee() {
-  const colors = paintings.map((p) => pickPrimary(p.swatches));
+  const colors = paintings.map((p) => pickPrimary(describeSwatches(p.swatches)).hex);
 
   return (
     <div aria-hidden className="group overflow-hidden border-b border-line bg-paper py-4">
@@ -15,7 +15,7 @@ export function SwatchMarquee() {
             key={i}
             className="flex h-12 w-28 items-end rounded-md px-2 pb-1.5 font-mono text-[11px] uppercase"
             // Label in whichever of white or ink reads better on the swatch.
-            style={{ background: hex, color: contrastRatio("#ffffff", hex) >= contrastRatio("#1f1a17", hex) ? "#ffffff" : "#1f1a17" }}
+            style={{ background: hex, color: contrast("#ffffff", hex) >= contrast("#1f1a17", hex) ? "#ffffff" : "#1f1a17" }}
           >
             {hex}
           </span>
