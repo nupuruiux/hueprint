@@ -31,24 +31,31 @@ export function Hero({ startIndex }: { startIndex: number }) {
 
   return (
     <HeroRotator slides={slides} startIndex={startIndex}>
-      <h1 className="text-5xl font-bold leading-[0.92] tracking-tight sm:text-6xl">
-        Every painting is a <span className="font-display font-normal italic">design system</span>
+      {/* Mixed type: Geist medium, then "design system" in Newsreader italic.
+          On desktop it breaks after "painting" so it reads
+          "Every painting / is a design system". */}
+      <h1 className="text-5xl leading-[0.98] sm:text-6xl lg:text-[3.5rem]">
+        <span className="font-sans font-medium tracking-[-0.03em]">
+          Every painting <br className="hidden lg:inline" />
+          is a
+        </span>{" "}
+        <span className="font-display italic tracking-[-0.01em]">design system</span>
       </h1>
-      <p className="mt-6 font-display text-xl leading-snug text-paper/85">
-        {paintings.length} public-domain paintings. Pick one, get a UI theme that passes AA.
+      <p className="mt-3 font-sans text-base leading-relaxed text-paper/85">
+        {paintings.length} beautiful paintings to choose from. Pick one, get a UI theme that passes AA.
       </p>
 
       {/* Movement index: doubles as navigation into the gallery. */}
-      <nav aria-label="Movements" className="mt-6">
+      <nav aria-label="Movements" className="mt-8">
         <ol>
           {movements.map((m, i) => (
             <li key={m}>
               <Link
                 href={`/?movement=${slugify(m)}#gallery`}
-                className="group flex items-baseline justify-between py-0.5 text-lg font-bold leading-tight tracking-tight"
+                className="group flex items-baseline justify-between py-0.5 text-base font-semibold leading-tight tracking-tight"
               >
                 <span className="underline-offset-4 group-hover:underline">{m}</span>
-                <span className="font-display text-base font-normal text-paper/70">{toRoman(i + 1)}</span>
+                <span className="font-display text-sm font-normal text-paper/70">{toRoman(i + 1)}</span>
               </Link>
             </li>
           ))}
