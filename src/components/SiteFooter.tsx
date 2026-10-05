@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-line bg-paper-deep">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="max-w-sm space-y-3">
-          <Logo className="text-2xl" />
+          <Logo />
           <p className="font-display text-xl leading-snug text-ink-muted">
             Any painting, a UI theme you can actually ship.
           </p>
