@@ -13,10 +13,10 @@ type FormatId = (typeof FORMATS)[number]["id"];
 
 const STRATEGY_NAMES: Record<Strategy, string> = { faithful: "Faithful", soft: "Soft", bold: "Bold" };
 
-type Props = { theme: Theme; defaultName: string; visible: boolean; shareable?: boolean };
+type Props = { theme: Theme; defaultName: string; shareable?: boolean };
 
 // Sticky bar + export dialog. No sign-in, no gate: export is free and immediate.
-export function ExportPanel({ theme, defaultName, visible, shareable = true }: Props) {
+export function ExportPanel({ theme, defaultName, shareable = true }: Props) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [name, setName] = useState(defaultName);
   const [format, setFormat] = useState<FormatId>("css");
@@ -59,14 +59,9 @@ export function ExportPanel({ theme, defaultName, visible, shareable = true }: P
 
   return (
     <>
-      {/* Sticky bar: slides up once you've scrolled past the direction tiles. */}
-      <div
-        // Hidden = moved below the screen edge AND invisible, so it can never show
-        // by accident. Visibility switches at the end of the slide-out.
-        className={`fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-ink text-paper transition-[translate,visibility] duration-300 ${visible ? "visible translate-y-0" : "invisible translate-y-full"}`}
-        aria-hidden={!visible}
-        inert={!visible}
-      >
+      {/* Export bar, always pinned to the bottom of theme pages. globals.css
+          adds matching bottom padding to the page so it never hides content. */}
+      <div data-export-bar className="fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-ink text-paper">
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:px-6">
           <p className="min-w-0 flex-1 truncate text-sm">
             <span className="font-semibold">{label}</span>
