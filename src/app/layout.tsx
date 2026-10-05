@@ -6,13 +6,12 @@ import { UploadProvider } from "@/components/upload/UploadProvider";
 import "./globals.css";
 
 // Primary: Newsreader, the editorial serif for headlines, painting titles and
-// the italic accents. Its optical-size axis (opsz) switches to the
-// high-contrast display cut at large sizes and the sturdier text cut at small
-// ones automatically, so one family covers both jobs.
+// the italic accents. Loaded without its optical-size (opsz) axis: that axis
+// nearly doubled the font download (325KB → 172KB in total without it) and
+// cost ~6 Lighthouse points, for a barely visible gain at display sizes.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   style: ["normal", "italic"],
-  axes: ["opsz"],
   subsets: ["latin"],
 });
 
@@ -23,6 +22,8 @@ const geist = Geist({
 });
 
 // Geist Mono for data only: hex codes, token names and exported code.
+// Kept preloaded (it's small, 23KB): theme pages show hex codes near the top,
+// and loading it late made that text swap fonts and shift the layout.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
