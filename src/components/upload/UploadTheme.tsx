@@ -64,13 +64,13 @@ export function UploadTheme() {
 
   return (
     <>
-      <header className="grid gap-8 pb-12 pt-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-14 lg:pt-12">
-        <div className="order-2 lg:order-1">
+      <header className="flex flex-col gap-8 pb-12 pt-8 lg:flex-row lg:items-center lg:gap-12 lg:pt-12">
+        <div className="order-2 lg:order-1 lg:h-[480px] lg:max-w-[60%] lg:shrink-0">
           {/* A local image (blob: URL), so next/image can't optimise it; a plain img is right here. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={upload.url} alt={`Your image: ${upload.name}`} className="h-auto max-h-[78vh] w-full object-contain object-left-top" />
+          <img src={upload.url} alt={`Your image: ${upload.name}`} className="h-auto max-h-[78vh] w-auto max-w-full lg:h-full lg:max-h-none lg:object-contain" />
         </div>
-        <div className="order-1 lg:order-2 lg:pt-6">
+        <div className="order-1 min-w-0 flex-1 lg:order-2">
           <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">Your image</p>
           <h1 className="mt-3 break-words font-display text-5xl italic leading-[0.95] sm:text-6xl">{upload.name}</h1>
           <p className="mt-4 text-sm text-ink-muted">Stays on your device. Nothing was uploaded.</p>
