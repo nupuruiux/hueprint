@@ -38,7 +38,7 @@ export function TokenPanel({ theme, mode, swatches, locks, onModeChange, onLock,
     <section aria-labelledby="tokens-title">
       <div className="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-4">
         <div>
-          <h2 id="tokens-title" className="font-display text-4xl sm:text-5xl">
+          <h2 id="tokens-title" className="font-display text-3xl sm:text-4xl">
             The <span className="italic">tokens</span>
           </h2>
           <p className="mt-2 text-ink-muted">

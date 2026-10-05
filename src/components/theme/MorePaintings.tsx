@@ -14,7 +14,7 @@ export function MorePaintings({ painting }: { painting: Painting }) {
 
   return (
     <section aria-labelledby="more-title" className="mt-24 border-t border-line pt-12">
-      <h2 id="more-title" className="font-display text-4xl sm:text-5xl">
+      <h2 id="more-title" className="font-display text-3xl sm:text-4xl">
         Try another <span className="italic">painting</span>
       </h2>
       <p className="mt-2 text-ink-muted">More from {painting.movement}.</p>

@@ -118,7 +118,7 @@ export function HeroRotator({ slides, startIndex, children }: Props) {
       <HeroLoupe src={slide.src} objectPosition={slide.focus} />
       <HeroRedlines src={slide.src} objectPosition={slide.focus} roles={slide.roles} />
 
-      <div data-no-loupe data-hero-frame className="relative z-10 mx-4 mb-16 mt-auto border border-paper/70 bg-night/40 p-6 backdrop-blur-[3px] sm:mx-auto sm:max-w-md sm:p-8 lg:my-auto lg:ml-[7vw]">
+      <div data-no-loupe data-hero-frame className="relative z-10 mx-4 mb-16 mt-auto border border-paper/70 bg-night/40 p-6 backdrop-blur-[3px] sm:mx-auto sm:max-w-md sm:p-8 lg:my-auto lg:ml-[7vw] lg:max-w-[30rem]">
         {children}
 
         <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -132,9 +132,6 @@ export function HeroRotator({ slides, startIndex, children }: Props) {
             <span aria-hidden className="absolute -right-3 -top-3 rotate-12 rounded-sm bg-paper px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-ink shadow">
               Try me
             </span>
-          </Link>
-          <Link href="/#upload" className="text-sm font-medium underline underline-offset-4 hover:text-paper/80">
-            or upload your own
           </Link>
         </div>
       </div>

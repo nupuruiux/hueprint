@@ -18,7 +18,7 @@ type Props = {
 export function OptionTiles({ options, selected, mode, onSelect }: Props) {
   return (
     <fieldset>
-      <legend className="font-display text-4xl sm:text-5xl">
+      <legend className="font-display text-3xl sm:text-4xl">
         Choose a <span className="italic">direction</span>
       </legend>
       <p className="mt-2 text-ink-muted">Every option passes WCAG AA. Pick the mood; everything below updates.</p>
@@ -46,7 +46,7 @@ export function OptionTiles({ options, selected, mode, onSelect }: Props) {
                   <span className="font-display text-2xl italic">{COPY[strategy].name}</span>
                   {isSelected && <span className="rounded-full bg-ink px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-paper">Selected</span>}
                 </span>
-                <span className="mt-1 text-sm text-ink-muted">{COPY[strategy].blurb}</span>
+                <span className="mt-1 text-sm text-pretty text-ink-muted">{COPY[strategy].blurb}</span>
 
                 <span aria-hidden className="mt-4 flex h-6 overflow-hidden rounded-sm ring-1 ring-ink/10">
                   {(["primary", "secondary", "accent", "surface", "text"] as const).map((role) => (

@@ -24,8 +24,9 @@
   --color-rosewood-light: #b5677d;
   --color-night: #14110f;
 
-  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Motion: short and smooth, 200–400 ms ease-out. */
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
@@ -79,6 +80,27 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+}
+
+/* Even out heading lines (no lone word on the first or last line) and avoid
+   one-word last lines in paragraphs. */
+h1, h2, h3, legend {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* The export bar is fixed to the bottom of theme pages; leave room for it so
+   the end of the page (the footer) can scroll fully into view above it. */
+body:has([data-export-bar]) {
+  padding-bottom: 4rem;
+}
+
+/* Selected text in the site's accent instead of the browser's default blue (8.9:1). */
+::selection {
+  background: var(--color-rosewood);
+  color: var(--color-paper);
 }
 
 /* One visible focus ring everywhere, in the accent. */

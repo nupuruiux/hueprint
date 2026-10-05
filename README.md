@@ -58,6 +58,7 @@ The engine lives in [`src/lib/theme/`](src/lib/theme) as pure TypeScript functio
 | --- | --- |
 | Framework | Next.js 16 (App Router) + TypeScript |
 | Styling | Tailwind CSS v4 |
+| Type | Newsreader (editorial, with its optical-size axis), Geist (UI), Geist Mono (hex codes and code) |
 | Colour | `node-vibrant` (extraction), `culori` (OKLCH + WCAG contrast) |
 | Motion | Motion (Framer Motion) |
 | Tests | Vitest |

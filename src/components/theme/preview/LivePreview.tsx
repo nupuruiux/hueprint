@@ -14,7 +14,7 @@ export function LivePreview({ tokens, mode, onModeChange }: Props) {
     <section aria-labelledby="preview-title">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 id="preview-title" className="font-display text-4xl sm:text-5xl">
+          <h2 id="preview-title" className="font-display text-3xl sm:text-4xl">
             See it <span className="italic">live</span>
           </h2>
           <p className="mt-2 text-ink-muted">Hover and click around: buttons show their hover, pressed and focus colours.</p>

@@ -52,7 +52,7 @@ export function RoleRow({ role, tokens, swatches, locked, copied, onCopy, onLock
   const sample = SAMPLE_TEXT[role];
 
   return (
-    <li className="grid grid-cols-[3rem_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 py-3 sm:grid-cols-[3rem_minmax(0,1fr)_6.5rem_minmax(0,13rem)_auto]">
+    <li className="grid grid-cols-[3rem_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 py-3 sm:grid-cols-[3rem_minmax(0,1fr)_6.5rem_minmax(0,15rem)_auto]">
       <span
         aria-hidden
         className="flex h-12 w-12 items-center justify-center rounded-md font-display text-lg ring-1 ring-ink/10"

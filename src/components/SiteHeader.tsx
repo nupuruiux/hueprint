@@ -61,7 +61,7 @@ function StudioBar() {
     <header className="relative z-20 border-b border-line bg-paper text-ink">
       <div className="mx-auto flex h-12 max-w-7xl items-center gap-6 px-4 sm:px-6">
         <Link href="/" aria-label="Hueprint home">
-          <Logo className="text-lg" />
+          <Logo />
         </Link>
         <Link href="/#gallery" className="text-sm font-medium text-ink-muted underline-offset-4 hover:text-ink hover:underline">
           ← Gallery

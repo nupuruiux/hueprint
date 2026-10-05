@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo } from "react";
 import { buildOptions, describeSwatches, type Mode, type Role, type Strategy } from "@/lib/theme";
 import { parseThemeState, serializeThemeState, type ThemeState } from "@/lib/theme-url";
 import { ExportPanel } from "./ExportPanel";
@@ -26,20 +26,6 @@ export function ThemeStudio({ title, swatches: raw, shareable = true }: Props) {
   const options = buildOptions(swatches, state.locks);
   const theme = options[state.strategy];
 
-  // Show the sticky export bar once the direction tiles have scrolled
-  // above the top of the screen.
-  const tilesRef = useRef<HTMLDivElement>(null);
-  const [pastTiles, setPastTiles] = useState(false);
-  useEffect(() => {
-    const tiles = tilesRef.current;
-    if (!tiles) return;
-    const observer = new IntersectionObserver(([entry]) => {
-      setPastTiles(!entry.isIntersecting && entry.boundingClientRect.top < 0);
-    });
-    observer.observe(tiles);
-    return () => observer.disconnect();
-  }, []);
-
   function update(next: Partial<ThemeState>) {
     const query = serializeThemeState({ ...state, ...next }, params).toString();
     router.replace(`${pathname}${query ? `?${query}` : ""}`, { scroll: false });
@@ -53,27 +39,29 @@ export function ThemeStudio({ title, swatches: raw, shareable = true }: Props) {
   }
 
   return (
-    <div className="space-y-16">
-      <div ref={tilesRef}>
+    <>
+      <div className="space-y-16">
         <OptionTiles
           options={options}
           selected={state.strategy}
           mode={state.mode}
           onSelect={(strategy: Strategy) => update({ strategy })}
         />
+        {/* Right after the tiles, so you see the dashboard react as you pick. */}
+        <LivePreview tokens={theme[state.mode]} mode={state.mode} onModeChange={(mode) => update({ mode })} />
+        <TokenPanel
+          theme={theme}
+          mode={state.mode}
+          swatches={swatches}
+          locks={state.locks[state.mode] ?? {}}
+          onModeChange={(mode) => update({ mode })}
+          onLock={(role, hex) => setLock(state.mode, role, hex)}
+          onResetLocks={() => update({ locks: { ...state.locks, [state.mode]: {} } })}
+        />
       </div>
-      {/* Right after the tiles, so you see the dashboard react as you pick. */}
-      <LivePreview tokens={theme[state.mode]} mode={state.mode} onModeChange={(mode) => update({ mode })} />
-      <TokenPanel
-        theme={theme}
-        mode={state.mode}
-        swatches={swatches}
-        locks={state.locks[state.mode] ?? {}}
-        onModeChange={(mode) => update({ mode })}
-        onLock={(role, hex) => setLock(state.mode, role, hex)}
-        onResetLocks={() => update({ locks: { ...state.locks, [state.mode]: {} } })}
-      />
-      <ExportPanel theme={theme} defaultName={title} visible={pastTiles} shareable={shareable} />
-    </div>
+      {/* Outside the spaced wrapper: space-y-16 adds a bottom margin to its
+          children, which would lift this fixed bar 64px off the bottom edge. */}
+      <ExportPanel theme={theme} defaultName={title} shareable={shareable} />
+    </>
   );
 }
