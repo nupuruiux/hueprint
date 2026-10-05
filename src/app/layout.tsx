@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter_Tight } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { UploadProvider } from "@/components/upload/UploadProvider";
 import "./globals.css";
 
-// Display: an editorial serif, used big and often italic.
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
+// Primary: Newsreader, the editorial serif for headlines, painting titles and
+// the italic accents. Its optical-size axis (opsz) switches to the
+// high-contrast display cut at large sizes and the sturdier text cut at small
+// ones automatically, so one family covers both jobs.
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   style: ["normal", "italic"],
+  axes: ["opsz"],
   subsets: ["latin"],
 });
 
-// UI: a clean, slightly condensed grotesk.
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+// Secondary: Geist for the interface (body, labels, buttons).
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
+});
+
+// Geist Mono for data only: hex codes, token names and exported code.
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -26,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${instrumentSerif.variable} ${interTight.variable} h-full antialiased`}>
+    <html lang="en" className={`${newsreader.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <a
           href="#main"
